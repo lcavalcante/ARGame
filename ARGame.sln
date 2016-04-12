@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2015
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARGame.CSharp", "ARGame.CSharp.csproj", "{67FEA8A0-002B-F649-A69B-6B5ABE5B7150}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ARGame.CSharp.Editor", "ARGame.CSharp.Editor.csproj", "{BF7CCDF2-89ED-CE6F-9527-9E54ED8C849A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{67FEA8A0-002B-F649-A69B-6B5ABE5B7150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67FEA8A0-002B-F649-A69B-6B5ABE5B7150}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67FEA8A0-002B-F649-A69B-6B5ABE5B7150}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67FEA8A0-002B-F649-A69B-6B5ABE5B7150}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF7CCDF2-89ED-CE6F-9527-9E54ED8C849A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF7CCDF2-89ED-CE6F-9527-9E54ED8C849A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF7CCDF2-89ED-CE6F-9527-9E54ED8C849A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF7CCDF2-89ED-CE6F-9527-9E54ED8C849A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -13,6 +13,7 @@ namespace Vuforia
         /// The materials that will be set for the teapot model
         /// </summary>
         public Material m_Material;
+        public Material defaultMaterial;
         public GameObject mGameObject;
         #endregion // PUBLIC_MEMBERS
 
@@ -55,7 +56,7 @@ namespace Vuforia
         public void OnButtonReleased(VirtualButtonAbstractBehaviour vb)
         {
 
-
+            mGameObject.GetComponent<Renderer>().material = defaultMaterial;
             Debug.Log("Released");
         }
         #endregion //PUBLIC_METHODS
