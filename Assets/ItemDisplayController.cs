@@ -38,9 +38,15 @@ public class ItemDisplayController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.Escape))
         {
-            SceneManager.LoadScene("Menu");
+            GoToMenu();
         }
 
+    }
+
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
     public void configureDisplayItem1()
