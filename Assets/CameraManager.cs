@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CameraManager : MonoBehaviour {
 
@@ -10,6 +11,17 @@ public class CameraManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
-	}
+
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            GoToMenu();
+        }
+
+    }
+
+
+    public void GoToMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }

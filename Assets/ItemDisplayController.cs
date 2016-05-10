@@ -64,6 +64,22 @@ public class ItemDisplayController : MonoBehaviour {
         mainCanvas.gameObject.SetActive(false);
     }
 
+    public void configureDisplayItem2()
+    {
+        itemDisplayCanvas.gameObject.SetActive(true);
+
+        itemName.text = "SONG";
+        itemDescricao.text = "Jogadores devem encontrar a palavra passe para ganhar o desafio, a palavra passe será SONG";
+        itemRegras.text = "Regras\n1: Devem ser imprimidos, pelo menos, oito (8) cartões. Destes, metade serão relacionados a uma musica"+
+                          "e a outra sons de erro.\n" +
+            "2: Os cartões devem ser espalhados no ambiente distributivamente\n" +
+            "3: Os jogadores devem procurar os cartões, escaneá-los e apertar o botao play para escutar os sons\n" +
+            "4: Recomenda-se a cronometragem de tempo para a atividade\n" +
+            "5: O critério de vitória é achar a palavra passe\n";
+
+        mainCanvas.gameObject.SetActive(false);
+    }
+
     void alternateImages()
     {
         if (itemCard1.gameObject.activeSelf) {

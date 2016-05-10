@@ -9,12 +9,9 @@ namespace Vuforia
     {
 
         #region PUBLIC_MEMBERS
-        /// <summary>
-        /// The materials that will be set for the teapot model
-        /// </summary>
-        public Material m_Material;
-        public Material defaultMaterial;
-        public GameObject mGameObject;
+
+        private bool isPlaying = false;
+        private AudioSource mAudio;
         #endregion // PUBLIC_MEMBERS
 
 
@@ -24,12 +21,15 @@ namespace Vuforia
         #region MONOBEHAVIOUR_METHODS
         void Start()
         {
+            mAudio = this.transform.gameObject.GetComponent<AudioSource>();
+            Debug.Log("Starting VB");
             // Register with the virtual buttons TrackableBehaviour
             VirtualButtonBehaviour[] vbs = GetComponentsInChildren<VirtualButtonBehaviour>();
             for (int i = 0; i < vbs.Length; ++i)
             {
                 vbs[i].RegisterEventHandler(this);
             }
+            Debug.Log("Ending VB");
         }
 
         #endregion // MONOBEHAVIOUR_METHODS
@@ -43,9 +43,8 @@ namespace Vuforia
         {
             Debug.Log("!@#$%¨&*()_!@#$%¨&*()_+");
             Debug.Log("OnButtonPressed: " + vb.VirtualButtonName);
-
-
-            mGameObject.GetComponent<Renderer>().material = m_Material;
+            mAudio.Play();
+           
             //mGameObject.transform.localScale = new Vector3(2f,2f,2f);
            
         }
@@ -54,10 +53,8 @@ namespace Vuforia
         /// Called when the virtual button has just been released:
         /// </summary>
         public void OnButtonReleased(VirtualButtonAbstractBehaviour vb)
-        {
-
-            mGameObject.GetComponent<Renderer>().material = defaultMaterial;
-            Debug.Log("Released");
+        { 
+            mAudio.Stop();
         }
         #endregion //PUBLIC_METHODS
 
