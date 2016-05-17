@@ -54,7 +54,7 @@ namespace Vuforia
         /// </summary>
         public void OnButtonReleased(VirtualButtonAbstractBehaviour vb)
         { 
-            mAudio.Stop();
+            mAudio.Pause();
         }
         #endregion //PUBLIC_METHODS
 

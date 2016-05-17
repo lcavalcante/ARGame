@@ -19,6 +19,8 @@ public class ItemDisplayController : MonoBehaviour {
 
     public Canvas mainCanvas;
     public Canvas itemDisplayCanvas;
+
+    public Button CameraButton;
     #endregion
 
     private float time = 0f;
@@ -61,6 +63,8 @@ public class ItemDisplayController : MonoBehaviour {
             "4: Recomenda-se a cronometragem de tempo para a atividade\n" +
             "5: O critério de vitória é achar a palavra passe\n";
 
+        CameraButton.onClick.AddListener(() => LoadScene("Senha"));
+
         mainCanvas.gameObject.SetActive(false);
     }
 
@@ -76,6 +80,8 @@ public class ItemDisplayController : MonoBehaviour {
             "3: Os jogadores devem procurar os cartões, escaneá-los e apertar o botao play para escutar os sons\n" +
             "4: Recomenda-se a cronometragem de tempo para a atividade\n" +
             "5: O critério de vitória é achar a palavra passe\n";
+
+        CameraButton.onClick.AddListener(() => LoadScene("Song"));
 
         mainCanvas.gameObject.SetActive(false);
     }
@@ -97,5 +103,10 @@ public class ItemDisplayController : MonoBehaviour {
     {
         itemDisplayCanvas.gameObject.SetActive(false);
         mainCanvas.gameObject.SetActive(true);
+    }
+
+    void LoadScene(string cena)
+    {
+        SceneManager.LoadScene(cena);
     }
 }

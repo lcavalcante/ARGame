@@ -77,6 +77,7 @@
     <Compile Include="Assets\Common\TapHandler.cs" />
     <Compile Include="Assets\Common\TrackableSettings.cs" />
     <Compile Include="Assets\ItemDisplayController.cs" />
+    <Compile Include="Assets\RatioController.cs" />
     <Compile Include="Assets\Scripts\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\ModelSwap.cs" />
     <Compile Include="Assets\VirtualButtonEventHnadler.cs" />
